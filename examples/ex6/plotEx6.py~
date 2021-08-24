@@ -1,0 +1,163 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import readFile as r
+
+Qe=r.readFile("Qe_out.txt")
+Qc=r.readFile("Qc_out.txt")
+Lm=r.readFile("Lm_out.txt")
+
+fig=plt.figure(1)
+
+plt.subplot(331)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 1')
+plt.plot(Lm[:,0], Lm[:,1] )
+
+plt.subplot(332)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 2')
+plt.plot(Lm[:,0], Lm[:,2] )
+
+plt.subplot(333)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 3')
+plt.plot(Lm[:,0], Lm[:,3] )
+
+plt.subplot(334)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 4')
+plt.plot(Lm[:,0], Lm[:,4] )
+
+plt.subplot(335)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 5')
+plt.plot(Lm[:,0], Lm[:,5] )
+
+plt.subplot(336)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 6')
+plt.plot(Lm[:,0], Lm[:,6] )
+
+plt.subplot(337)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 7')
+plt.plot(Lm[:,0], Lm[:,7] )
+
+plt.subplot(338)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 10')
+plt.plot(Lm[:,0], Lm[:,10] )
+
+plt.subplot(339)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 11')
+plt.plot(Lm[:,0], Lm[:,11] )
+
+fig=plt.figure(2)
+
+plt.subplot(341)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 1')
+plt.plot(Qc[:,0], Qc[:,1] )
+
+plt.subplot(342)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 2')
+plt.plot(Qc[:,0], Qc[:,2] )
+
+plt.subplot(343)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 3')
+plt.plot(Qc[:,0], Qc[:,3] )
+
+plt.subplot(344)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 4')
+plt.plot(Qc[:,0], Qc[:,4] )
+
+plt.subplot(345)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 5')
+plt.plot(Qc[:,0], Qc[:,5] )
+
+plt.subplot(346)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 6')
+plt.plot(Qc[:,0], Qc[:,6] )
+
+plt.subplot(347)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 7')
+plt.plot(Qc[:,0], Qc[:,7] )
+
+plt.subplot(348)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 8')
+plt.plot(Qc[:,0], Qc[:,8] )
+
+plt.subplot(349)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 9')
+plt.plot(Qc[:,0], Qc[:,9] )
+
+plt.subplot(3,4,10)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 10')
+plt.plot(Qc[:,0], Qc[:,10] )
+
+plt.subplot(3,4,11)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 11')
+plt.plot(Qc[:,0], Qc[:,11] )
+
+plt.subplot(3,4,12)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\omega(rad)$',fontsize=15)
+plt.title(' 12')
+plt.plot(Qc[:,0], Qc[:,12] )
+
+
+
+
+plt.show()
