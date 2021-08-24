@@ -1,0 +1,132 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import readFile as r
+
+q=r.readFile("q_out.txt")
+qt=r.readFile("qt_out.txt")
+qtt=r.readFile("qtt_out.txt")
+
+fig=plt.figure(1)
+
+plt.subplot(221)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\theta(rad)$',fontsize=15)
+plt.title('Deslocamento Angulares')
+plt.plot(q[:,0],q[:,6]%(2*np.pi),linewidth=1.7)
+plt.plot(q[:,0],q[:,9],linewidth=1.7)
+plt.plot(q[:,0],q[:,12],linewidth=1.7)
+plt.legend(['manivela','biela','cursor'],loc='best')
+
+plt.subplot(222)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$deslocamento(m)$',fontsize=15)
+plt.title('Centro Manivela')
+plt.plot(q[:,0],q[:,4],linewidth=1.7)
+plt.plot(q[:,0],q[:,5],linewidth=1.7)
+plt.legend([r'$R_x$', r'$R_y$'],loc='best')
+
+plt.subplot(223)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$deslocamento(m)$',fontsize=15)
+plt.title('Centro Biela')
+plt.plot(q[:,0],q[:,7],linewidth=1.7)
+plt.plot(q[:,0],q[:,8],linewidth=1.7)
+plt.legend([r'$R_x$', r'$R_y$'],loc='best')
+
+
+plt.subplot(224)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$deslocamento(m)$',fontsize=15)
+plt.title('Centro Cursor')
+plt.plot(q[:,0],q[:,10],linewidth=1.7)
+plt.plot(q[:,0],q[:,11],linewidth=1.7)
+plt.ylim(-0.01,0.26)
+plt.legend([r'$R_x$', r'$R_y$'],loc='best')
+
+
+fig=plt.figure(2)
+
+plt.subplot(221)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\dot{\theta}(rad/s)$',fontsize=15)
+plt.title('Velocidades Angulares')
+plt.plot(qt[:,0],qt[:,6],linewidth=1.7)
+plt.plot(qt[:,0],qt[:,9],linewidth=1.7)
+plt.plot(qt[:,0],qt[:,12],linewidth=1.7)
+plt.legend(['manivela','biela','cursor'],loc='best')
+
+plt.subplot(222)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$velocidade(m/s)$',fontsize=15)
+plt.title('Velocidade Centro Manivela')
+plt.plot(qt[:,0],qt[:,4],linewidth=1.7)
+plt.plot(qt[:,0],qt[:,5],linewidth=1.7)
+plt.legend([r'$\dot{R_x}$', r'$\dot{R_y}$'],loc='best')
+
+plt.subplot(223)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$velocidade(m/s)$',fontsize=15)
+plt.title('Velocidade Centro Biela')
+plt.plot(qt[:,0],qt[:,7],linewidth=1.7)
+plt.plot(qt[:,0],qt[:,8],linewidth=1.7)
+plt.legend([r'$\dot{R_x}$', r'$\dot{R_y}$'],loc='best')
+
+
+plt.subplot(224)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$velocidade(m/s)$',fontsize=15)
+plt.title('Velocidade Centro Cursor')
+plt.plot(qt[:,0],qt[:,10],linewidth=1.7)
+plt.plot(qt[:,0],qt[:,11],linewidth=1.7)
+plt.legend([r'$\dot{R_x}$', r'$\dot{R_y}$'],loc='best')
+
+fig=plt.figure(3)
+
+plt.subplot(221)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$\ddot{\theta}(rad/s^2)$',fontsize=15)
+plt.title('Aceleracoes Angulares')
+plt.plot(qtt[:,0],qtt[:,6],linewidth=1.7)
+plt.plot(qtt[:,0],qtt[:,9],linewidth=1.7)
+plt.plot(qtt[:,0],qtt[:,12],linewidth=1.7)
+plt.legend(['manivela','biela','cursor'],loc='best')
+
+plt.subplot(222)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$aceleracao(m/s^2)$',fontsize=15)
+plt.title('Aceleracao Centro Manivela')
+plt.plot(qtt[:,0],qtt[:,4],linewidth=1.7)
+plt.plot(qtt[:,0],qtt[:,5],linewidth=1.7)
+plt.legend([r'$\ddot{R_x}$', r'$\ddot{R_y}$'],loc='best')
+
+plt.subplot(223)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$aceleracao(m/s^2)$',fontsize=15)
+plt.title('Aceleracao Centro Biela')
+plt.plot(qtt[:,0],qtt[:,7],linewidth=1.7)
+plt.plot(qtt[:,0],qtt[:,8],linewidth=1.7)
+plt.legend([r'$\ddot{R_x}$', r'$\ddot{R_y}$'],loc='best')
+
+
+plt.subplot(224)
+plt.grid()
+plt.xlabel(r'$tempo(s)$',fontsize=15)
+plt.ylabel(r'$aceleracao(m/s^2)$',fontsize=15)
+plt.title('Aceleracao Centro Cursor')
+plt.plot(qtt[:,0],qtt[:,10],linewidth=1.7)
+plt.plot(qtt[:,0],qtt[:,11],linewidth=1.7)
+plt.legend([r'$\ddot{R_x}$', r'$\ddot{R_y}$'],loc='best')
+
+
+plt.show()
